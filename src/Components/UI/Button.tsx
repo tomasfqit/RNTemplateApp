@@ -13,7 +13,7 @@ export interface IButtonProps {
 export const Button = ({ title, onPress, disabled, loading }: IButtonProps) => {
   return (
     <TouchableOpacity
-      style={styles.button}
+      style={[styles.button, disabled && styles.disabled]}
       onPress={onPress}
       disabled={disabled || loading}
     >
@@ -30,6 +30,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
+    flexDirection: 'row',
+    gap: 10,
+  },
+  disabled: {
+    backgroundColor: COLORS.gray[200],
   },
   title: {
     color: 'white',

@@ -1,7 +1,7 @@
-import { ProfileUIView } from "./ProfileUI.view"
+import { useProfileUIHook } from './ProfileUI.hook';
+import { ProfileUIView } from './ProfileUI.view';
 
 export const ProfileUI = () => {
-    return (
-        <ProfileUIView />
-    )
-}   
+  const hook = useProfileUIHook();
+  return <ProfileUIView {...hook} />;
+};

@@ -71,5 +71,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     backgroundColor: COLORS.gray[100],
+    width: '100%',
   },
 });

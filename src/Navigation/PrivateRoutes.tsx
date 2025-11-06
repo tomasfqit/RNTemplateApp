@@ -4,6 +4,7 @@ import {
   DrawerNavigationOptions,
   DrawerNavigationProp,
 } from '@react-navigation/drawer';
+import { ProfileUI } from '../view/User/Profile/ProfileUI.controller';
 
 export interface IPrivateRoute {
   name: string;
@@ -21,6 +22,15 @@ export const privateRoutes: IPrivateRoute[] = [
   {
     name: 'Home',
     component: HomeUI,
-    options: { headerShown: false },
+    options: {
+      title: 'Inicio',
+    },
+  },
+  {
+    name: 'Settings',
+    component: ProfileUI,
+    options: {
+      title: 'Perfil de usuario',
+    },
   },
 ];

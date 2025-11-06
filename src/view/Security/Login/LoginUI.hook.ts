@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useAuthStore } from '../../../store/auth.store';
 
 export interface IFormLogin {
     email: string
@@ -12,6 +13,7 @@ export interface ILoginUIHook {
 }
 
 export const useLoginUIHook = (): ILoginUIHook => {
+  const { login } = useAuthStore();
   const [form, setForm] = useState<IFormLogin>({ email: '', password: '' });
 
   const handleChangeForm = (key: keyof IFormLogin, value: string) => {
@@ -20,6 +22,7 @@ export const useLoginUIHook = (): ILoginUIHook => {
 
   const handleLogin = () => {
     console.log('login', form);
+    login(form.email, { id: '1', name: 'John Doe', email: form.email });
   };
 
   return {

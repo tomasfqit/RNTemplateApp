@@ -1,7 +1,7 @@
 
 import { useAuthStore } from '../store/auth.store';
-import { Text, View } from 'react-native';
 import StackNavigator from '../navigation/StackNavigator';
+import DrawerNavigator from './DrawerNavigator';
 
 const AppRouter = () => {
   const { token } = useAuthStore();
@@ -9,11 +9,7 @@ const AppRouter = () => {
   if (!token) {
     return (<StackNavigator />);
   } else {
-    return (
-      <View>
-        <Text>token is found</Text>
-      </View>
-    );
+    return (<DrawerNavigator />);
   }
 };
 

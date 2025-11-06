@@ -1,11 +1,12 @@
 buildscript {
-    ext {
-        buildToolsVersion = "36.0.0"
+     ext {
+        buildToolsVersion = "35.0.0"       // usa la estable disponible
         minSdkVersion = 24
-        compileSdkVersion = 36
-        targetSdkVersion = 36
-        ndkVersion = "27.1.12297006"
-        kotlinVersion = "2.1.20"
+        compileSdkVersion = 35             // estable en vez de 35
+        targetSdkVersion = 35
+        ndkVersion = "27.0.12077973"        // update to r27 for std::format support
+        cmakeVersion = "3.22.1"            // explícito, para ninja
+        kotlinVersion = "2.0.21"
     }
     repositories {
         google()

@@ -46,6 +46,7 @@ export const Input = ({
     <TextInput
       style={styles.input}
       placeholder={placeholder}
+      placeholderTextColor={COLORS.black}
       value={value}
       onChangeText={onChangeText}
       secureTextEntry={secureTextEntry}

@@ -20,5 +20,8 @@ export const COLORS = {
         700: '#1976D2',
         800: '#1565C0',
         900: '#0D47A1',
-    }
+    },
+    black: '#000000',
+    white: '#FFFFFF',
+    red: '#FF0000',
 }
